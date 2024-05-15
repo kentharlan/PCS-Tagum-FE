@@ -180,7 +180,7 @@ const History = () => {
                                     <TableCell align="center" style={{ fontWeight: "bold", fontSize: "larger" }}>{history.totalRooms}</TableCell>
                                     <TableCell align="right" style={{ fontWeight: "bold", fontSize: "larger" }}>Total Revenue</TableCell>
                                     <TableCell align="center" style={{ fontWeight: "bold", fontSize: "larger" }}>{history.totalAmount ? `₱ ${history.totalAmount}` : '-'}</TableCell>
-                                    <TableCell colSpan={3} />
+                                    <TableCell colSpan={4} />
                                 </TableRow>
                             </TableFooter>
                         </Table>
