@@ -5,17 +5,16 @@
 }
 
 table.GeneratedTable {
-  width: 100%;
+  width: 100%; /* Adjusted to fit the table within the screen without overflow */
+  max-width: 100vw; /* Ensures the table does not exceed the viewport width */
   background: none;
   border-collapse: collapse;
   border: none;
   color: #000000;
 }
-table.GeneratedTable th
 
-table.GeneratedTable td,
-table.GeneratedTable th {
+table.GeneratedTable td {
   border: none;
-  height: 50px;
-  width: 85px;
+  height: 10vh;
+  width: 3vw;
 }

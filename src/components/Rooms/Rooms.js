@@ -16,12 +16,12 @@ const GET_ACTIVE_TXNS_URL = "/txn/txns/active"
 
 const theme = createTheme({
     palette: {
-    half_hour_left: {
-        main: '#E3D026',
-        light: '#E9DB5D',
-        dark: '#A29415',
-        contrastText: '#242105',
-    },
+        half_hour_left: {
+            main: '#E3D026',
+            light: '#E9DB5D',
+            dark: '#A29415',
+            contrastText: '#242105',
+        },
     },
 });
 
@@ -172,7 +172,7 @@ const Rooms = () => {
     }
 
     const elements = (room) => {
-        if(!room) return
+        if (!room) return
 
         let color = "primary"
         switch (room.status) {
@@ -195,10 +195,12 @@ const Rooms = () => {
         return (
             <ThemeProvider theme={theme}>
                 <Button
-                    sx={{ 
+                    sx={{
                         height: "100%",
                         width: "100%",
-                        animation: shouldBlink ? "blink 1s linear infinite" : "none"
+                        minWidth: "0",
+                        animation: shouldBlink ? "blink 1s linear infinite" : "none",
+                        padding: 0 // Removed padding as per instructions
                     }}
                     variant="contained"
                     key={room.rooms_no}
@@ -214,168 +216,78 @@ const Rooms = () => {
     return (
         <>
             <Navbar />
-            <div style={{ margin: "0 2%" }}>
-                <h1 style={{marginBottom: "0"}}>Ground Floor</h1>
-                <table class="GeneratedTable" >
+            <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "80vh", margin: "0 2vw" }}>
+                <table className="GeneratedTable">
                     <tbody>
                         <tr>
-                            <th>{elements(rooms[27])}</th>
-                            <th rowSpan={3}>{elements(rooms[13])}</th>
-                            <th rowSpan={3}>{elements(rooms[12])}</th>
-                            <th rowSpan={3}>{elements(rooms[11])}</th>
-                            <th rowSpan={3}>{elements(rooms[10])}</th>
-                            <th rowSpan={3}>{elements(rooms[9])}</th>
-                            <th rowSpan={3}>{elements(rooms[8])}</th>
-                            <th rowSpan={3}>{elements(rooms[7])}</th>
-                            <th rowSpan={3}>{elements(rooms[6])}</th>
-                            <th rowSpan={3}>{elements(rooms[5])}</th>
-                            <th rowSpan={3}>{elements(rooms[4])}</th>
-                            <th rowSpan={3}>{elements(rooms[3])}</th>
-                            <th rowSpan={3}>{elements(rooms[2])}</th>
-                            <th rowSpan={3}>{elements(rooms[1])}</th>
-                            <th rowSpan={3}>{elements(rooms[0])}</th>
+                            <td colSpan={12}></td>
+                            <td>{elements(rooms[39])}</td>
+                            <td>{elements(rooms[38])}</td>
+                            <td>{elements(rooms[37])}</td>
+                            <td>{elements(rooms[36])}</td>
+                            <td>{elements(rooms[35])}</td>
+                            <td>{elements(rooms[34])}</td>
+                            <td>{elements(rooms[33])}</td>
+                            <td>{elements(rooms[32])}</td>
+                            <td>{elements(rooms[31])}</td>
+                            <td>{elements(rooms[30])}</td>
+                            <td>{elements(rooms[29])}</td>
                         </tr>
                         <tr>
-                            <th>{elements(rooms[28])}</th>
+                            <td colSpan={22}></td>
+                            <td>{elements(rooms[28])}</td>
                         </tr>
                         <tr>
-                            <th>{elements(rooms[29])}</th>
+                            <td colSpan={22}></td>
+                            <td>{elements(rooms[27])}</td>
                         </tr>
                         <tr>
-                            <th>{elements(rooms[30])}</th>
+                            <td colSpan={20}></td>
+                            <td>{elements(rooms[20])}</td>
+                            <td></td>
+                            <td>{elements(rooms[26])}</td>
                         </tr>
                         <tr>
-                            <th>{elements(rooms[31])}</th>
+                            <td rowSpan={2}>{elements(rooms[0])}</td>
+                            <td rowSpan={2}>{elements(rooms[1])}</td>
+                            <td rowSpan={2}>{elements(rooms[2])}</td>
+                            <td rowSpan={2}>{elements(rooms[3])}</td>
+                            <td rowSpan={2}>{elements(rooms[4])}</td>
+                            <td rowSpan={2}>{elements(rooms[5])}</td>
+                            <td rowSpan={2}>{elements(rooms[6])}</td>
+                            <td rowSpan={2}>{elements(rooms[7])}</td>
+                            <td rowSpan={2}>{elements(rooms[8])}</td>
+                            <td rowSpan={2}>{elements(rooms[9])}</td>
+                            <td rowSpan={2}>{elements(rooms[10])}</td>
+                            <td rowSpan={2}>{elements(rooms[11])}</td>
+                            <td rowSpan={2}>{elements(rooms[12])}</td>
+                            <td rowSpan={2}>{elements(rooms[13])}</td>
+                            <td rowSpan={2}>{elements(rooms[14])}</td>
+                            <td rowSpan={2}>{elements(rooms[15])}</td>
+                            <td rowSpan={2}>{elements(rooms[16])}</td>
+                            <td rowSpan={2}>{elements(rooms[17])}</td>
+                            <td rowSpan={2}>{elements(rooms[18])}</td>
+                            <td rowSpan={2}>{elements(rooms[19])}</td>
+                            <td>{elements(rooms[21])}</td>
+                            <td></td>
+                            <td>{elements(rooms[25])}</td>
                         </tr>
                         <tr>
-                            <th>{elements(rooms[32])}</th>
+                            <td>{elements(rooms[22])}</td>
+                            <td>{elements(rooms[23])}</td>
+                            <td>{elements(rooms[24])}</td>
                         </tr>
-                        <tr>
-                            <th>{elements(rooms[33])}</th>
-                        </tr>
-                        <tr>
-                            <th>{elements(rooms[34])}</th>
-                            <th rowSpan={3}>{elements(rooms[14])}</th>
-                            <th rowSpan={3}>{elements(rooms[15])}</th>
-                            <th rowSpan={3}>{elements(rooms[16])}</th>
-                            <th rowSpan={3}>{elements(rooms[17])}</th>
-                            <th rowSpan={3}>{elements(rooms[18])}</th>
-                            <th rowSpan={3}>{elements(rooms[19])}</th>
-                            <th rowSpan={3}>{elements(rooms[20])}</th>
-                            <th rowSpan={3}>{elements(rooms[21])}</th>
-                            <th rowSpan={3}>{elements(rooms[22])}</th>
-                            <th rowSpan={3}>{elements(rooms[23])}</th>
-                            <th rowSpan={3}>{elements(rooms[24])}</th>
-                            <th rowSpan={3}>{elements(rooms[25])}</th>
-                            <th rowSpan={3}>{elements(rooms[26])}</th>
-                            <th rowSpan={3}></th>
-                            <th>{elements(rooms[37])}</th>
-                            <th>{elements(rooms[42])}</th>
-                        </tr>
-                        <tr>
-                            <th>{elements(rooms[35])}</th>
-
-                            <th>{elements(rooms[38])}</th>
-                            <th>{elements(rooms[41])}</th>
-                        </tr>
-                        <tr>
-                            <th>{elements(rooms[36])}</th>
-
-                            <th>{elements(rooms[39])}</th>
-                            <th>{elements(rooms[40])}</th>
-                        </tr>
-                    </tbody>
-                </table >
-
-                <h1 style={{marginBottom: "0"}}>Second Floor</h1>
-                <table class="GeneratedTable" style={{marginBottom: "5vw"}}>
-                    <tbody>
-                        <tr>
-                            <th>&nbsp;</th>
-                            <th>&nbsp;</th>
-                            <th>&nbsp;</th>
-                            <th>&nbsp;</th>
-                            <th>&nbsp;</th>
-                            <th>&nbsp;</th>
-                            <th>&nbsp;</th>
-                            <th>&nbsp;</th>
-                            <th>&nbsp;</th>
-                            <th>&nbsp;</th>
-                            <th>&nbsp;</th>
-                            <th>&nbsp;</th>
-                            <th>&nbsp;</th>
-                            <th>{elements(rooms[67])}</th>
-                            <th colSpan={2}>{elements(rooms[66])}</th>
-                        </tr>
-                        <tr>
-                            <th>&nbsp;</th>
-                            <th>&nbsp;</th>
-                            <th>&nbsp;</th>
-                            <th>&nbsp;</th>
-                            <th>&nbsp;</th>
-                            <th>&nbsp;</th>
-                            <th>&nbsp;</th>
-                            <th>&nbsp;</th>
-                            <th>{elements(rooms[65])}</th>
-                            <th>{elements(rooms[64])}</th>
-                            <th>{elements(rooms[63])}</th>
-                            <th>{elements(rooms[62])}</th>
-                            <th>{elements(rooms[61])}</th>
-                            <th>{elements(rooms[60])}</th>
-                            <th>{elements(rooms[59])}</th>
-                            <th>{elements(rooms[58])}</th>
-                        </tr>
-                        <tr>
-                            <td height={"10vh"}></td>
-                        </tr>
-                        <tr>
-                            <th>&nbsp;</th>
-                            <th>&nbsp;</th>
-                            <th>&nbsp;</th>
-                            <th>&nbsp;</th>
-                            <th>&nbsp;</th>
-                            <th>&nbsp;</th>
-                            <th>&nbsp;</th>
-                            <th>&nbsp;</th>
-                            <th>{elements(rooms[57])}</th>
-                            <th>{elements(rooms[56])}</th>
-                            <th>{elements(rooms[55])}</th>
-                            <th>{elements(rooms[54])}</th>
-                            <th rowSpan={2} style={{paddingRight: "1vw", paddingBottom: "2vh"}}>{elements(rooms[53])}</th>
-                            <th>{elements(rooms[52])}</th>
-                            <th>{elements(rooms[51])}</th>
-                            <th>{elements(rooms[50])}</th>
-                        </tr>
-                        <tr>
-                        <th>&nbsp;</th>
-                            <th>&nbsp;</th>
-                            <th>&nbsp;</th>
-                            <th>&nbsp;</th>
-                            <th>&nbsp;</th>
-                            <th>&nbsp;</th>
-                            <th>&nbsp;</th>
-                            <th>&nbsp;</th>
-                            <th>{elements(rooms[49])}</th>
-                            <th>{elements(rooms[48])}</th>
-                            <th>{elements(rooms[47])}</th>
-                            <th>{elements(rooms[46])}</th>
-                            <th>{elements(rooms[45])}</th>
-                            <th>{elements(rooms[44])}</th>
-                            <th>{elements(rooms[43])}</th>
-                        </tr>
-                        
                     </tbody>
                 </table>
-
-                <Modal
-                    openModal={openModal}
-                    setOpenModal={setOpenModal}
-                    title={modalConfig.title}
-                    width="30vw"
-                >
-                    {modalConfig.content}
-                </Modal>
             </div>
+            <Modal
+                openModal={openModal}
+                setOpenModal={setOpenModal}
+                title={modalConfig.title}
+                width="30vw"
+            >
+                {modalConfig.content}
+            </Modal>
         </>
     )
 }
